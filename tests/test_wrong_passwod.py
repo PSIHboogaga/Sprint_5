@@ -14,4 +14,4 @@ class TestRegistrationWithWrongPassword:
             "IvanMakarov45555@mail.ru")  # ввести майл
         driver.find_element(*StellarburgersLocators.Password).send_keys("1q2")  # ввести пароль
         driver.find_element(*StellarburgersLocators.Button_registr).click()  #  клик кнопки зарегисторироваться
-        assert driver.find_element(By.XPATH, "//p[text() = 'Некорректный пароль']").is_displayed
+        assert driver.find_element(*StellarburgersLocators.Nn_passwrd).is_displayed

@@ -17,4 +17,4 @@ class TestExitFromAccount:
         WebDriverWait(driver, 5).until(expected_conditions.element_to_be_clickable((By.XPATH, ".//button[text() = 'Выход']")))
         driver.find_element(*StellarburgersLocators.Button_exit).click()
         WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, ".//h2[text() = 'Вход']")))
-        assert driver.find_element(By.XPATH, ".//h2[text() = 'Вход']").is_displayed()
+        assert driver.find_element(*StellarburgersLocators.Vhod).is_displayed()

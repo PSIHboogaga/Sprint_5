@@ -20,7 +20,7 @@ class TestGoFomProfileInLego:
         WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, ".//p[text() = 'Конструктор']")))
         driver.find_element(*StellarburgersLocators.Button_lego).click()
         WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, ".//h1[text() = 'Соберите бургер']")))
-        assert driver.find_element(By.XPATH, ".//h1[text() = 'Соберите бургер']").is_displayed()  #
+        assert driver.find_element(*StellarburgersLocators.Sodery_burger).is_displayed()
 
 
 

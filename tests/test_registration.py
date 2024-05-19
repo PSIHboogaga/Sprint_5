@@ -18,4 +18,4 @@ class TestRegistration:
         driver.find_element(*StellarburgersLocators.Password).send_keys(password)  # ввести пароль
         driver.find_element(*StellarburgersLocators.Button_registr).click()  # клик кнопки зарегисторироваться
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable((By.XPATH, ".//h2[text() = 'Вход']")))
-        assert driver.find_element(By.XPATH, ".//h2[text() = 'Вход']").is_displayed() #
+        assert driver.find_element(*StellarburgersLocators.Vhod).is_displayed() #
