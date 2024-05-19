@@ -1,21 +1,21 @@
 from selenium.webdriver.common.by import By
 
 class StellarburgersLocators:
-    Button_self_akk = (By.XPATH, "//div/header/nav/a/p") # Кнопка личный кабинет
-    Button_enter = (By.XPATH, "//div/main/div/form/button")  #  кнопка войти
-    Button_enter_in_akk = (By.XPATH, "//div/main/section[2]/div/button") #  кнопка Войти в аккаунт
-    Button_exit = (By.XPATH, "//div/main/div/nav/ul/li[3]/button")  # Кнопка выйти
-    Button_registr = (By.XPATH, "//div/main/div/form/button")  # кнопка зарегисторироваться
-    Button_lego = (By.XPATH, "//div/header/nav/ul/li[1]/a")  # кнопка конструктор
-    Logo = (By.XPATH, "//div/header/nav/div")  # Логотип
-    Button_boolki = (By.XPATH, "//div/main/section[1]/div[1]/div[1]")  # кнопка boolki
-    Button_nachinki = (By.XPATH, "//div/main/section[1]/div[1]/div[3]")  # кнопка nachinki
-    Button_sous = (By.XPATH, "//div/main/section[1]/div[1]/div[2]")  # кнопка sous
+    Button_self_akk = (By.XPATH, ".//p[text() = 'Личный Кабинет']") # Кнопка личный кабинет БЕЗ АБСОЛЮТНОГО ПУТИ + можно заменить на //a[@href = '/account'] если и такой вариант с XPATH не будет устраивать
+    Button_enter = (By.XPATH, ".//button[text() = 'Войти']")  #  кнопка войти БЕЗ АБСОЛЮТНОГО ПУТИ
+    Button_enter_in_akk = (By.XPATH, ".//button[text() = 'Войти в аккаунт']") #  кнопка Войти в аккаунт БЕЗ АБСОЛЮТНОГО ПУТИ
+    Button_exit = (By.XPATH, ".//button[text() = 'Выход']")  # Кнопка выйти БЕЗ АБСОЛЮТНОГО ПУТИ
+    Button_registr = (By.XPATH, ".//button[text() = 'Зарегистрироваться']")  # кнопка зарегисторироваться БЕЗ АБСОЛЮТНОГО ПУТИ
+    Button_lego = (By.XPATH, ".//p[text() = 'Конструктор']")  # кнопка конструктор
+    Logo = (By.CLASS_NAME, "AppHeader_header__logo__2D0X2")  # Логотип
+    Button_boolki = (By.XPATH, ".//span[text() = 'Булки']")  # кнопка boolki
+    Button_nachinki = (By.XPATH, ".//span[text() = 'Начинки']")  # кнопка nachinki
+    Button_sous = (By.XPATH, ".//span[text() = 'Соусы']")  # кнопка sous
 
-    Http_registr = (By.XPATH, "//div/main/div/div/p[1]/a")  # ссылка Зарегистрироваться
-    Http_recovery_pass = (By.XPATH, "//div/main/div/div/p[2]/a") #  ссылка Восстановить пароль
-    Http_enter = (By.XPATH, "//div/main/div/div/p/a")  #  ссылка Войти
+    Http_registr = (By.XPATH, ".//a[text() = 'Зарегистрироваться']")  # ссылка Зарегистрироваться БЕЗ АБСОЛЮТНОГО ПУТИ
+    Http_recovery_pass = (By.XPATH, "//a[text() = 'Восстановить пароль']") #  ссылка Восстановить пароль
+    Http_enter = (By.XPATH, "//a[@href = '/login']")  #  ссылка Войти
 
-    Email = (By.XPATH, "//div/main/div/form/fieldset[1]/div/div/input")  # поле email
+    Email = (By.XPATH, "//label[text()='Email']/../input")  # поле email БЕЗ АБСОЛЮТНОГО ПУТИ
     Password = (By.NAME, "Пароль")  # поле пароля
     Name = (By.NAME, "name")  # поле имя
