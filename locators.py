@@ -19,3 +19,9 @@ class StellarburgersLocators:
     Email = (By.XPATH, "//label[text()='Email']/../input")  # поле email БЕЗ АБСОЛЮТНОГО ПУТИ
     Password = (By.NAME, "Пароль")  # поле пароля
     Name = (By.NAME, "name")  # поле имя
+    Profile = (By.XPATH, "//a[@href = '/account/profile']")
+    Vhod = (By.XPATH, ".//h2[text() = 'Вход']")
+    Sodery_burger = (By.XPATH, ".//h1[text() = 'Соберите бургер']")
+    Select_button = (By.XPATH, ".//span[text() = 'Булки']")
+    Nn_passwrd = (By.XPATH, ".//span[text() = 'Некорректный пароль']")
+
