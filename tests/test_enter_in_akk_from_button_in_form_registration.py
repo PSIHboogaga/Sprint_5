@@ -3,11 +3,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from fixture import driver
 from locators import StellarburgersLocators
-from data import get_sign_up_data
 
 class TestLoginInAkkFromButtonInFormRegistration:
     def test_enter_in_akk_from_button_in_form_registration(self, driver):
-        email, password = get_sign_up_data()
         driver.find_element(*StellarburgersLocators.Button_self_akk).click()  # Клик кнопки личный кабинет
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable((By.XPATH, ".//a[text() = 'Зарегистрироваться']")))  # подождали пока ссылка Зарегистрироваться станет кликабельной (важная тема для слабых ПК и медленного интернете)
         driver.find_element(*StellarburgersLocators.Http_registr).click()  # click ссылки Зарегистрироваться
