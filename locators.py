@@ -11,6 +11,7 @@ class StellarburgersLocators:
     Button_boolki = (By.XPATH, ".//span[text() = 'Булки']")  # кнопка boolki
     Button_nachinki = (By.XPATH, ".//span[text() = 'Начинки']")  # кнопка nachinki
     Button_sous = (By.XPATH, ".//span[text() = 'Соусы']")  # кнопка sous
+    Select_button = (By.XPATH, ".//div[contains(@class, 'current')]/span")  # нажатая кнопка
 
     Http_registr = (By.XPATH, ".//a[text() = 'Зарегистрироваться']")  # ссылка Зарегистрироваться БЕЗ АБСОЛЮТНОГО ПУТИ
     Http_recovery_pass = (By.XPATH, "//a[text() = 'Восстановить пароль']") #  ссылка Восстановить пароль
@@ -19,9 +20,8 @@ class StellarburgersLocators:
     Email = (By.XPATH, "//label[text()='Email']/../input")  # поле email БЕЗ АБСОЛЮТНОГО ПУТИ
     Password = (By.NAME, "Пароль")  # поле пароля
     Name = (By.NAME, "name")  # поле имя
-    Profile = (By.XPATH, "//a[@href = '/account/profile']")
-    Vhod = (By.XPATH, ".//h2[text() = 'Вход']")
-    Sodery_burger = (By.XPATH, ".//h1[text() = 'Соберите бургер']")
-    Select_button = (By.XPATH, ".//span[text() = 'Булки']")
-    Nn_passwrd = (By.XPATH, ".//span[text() = 'Некорректный пароль']")
 
+    Profile = (By.XPATH, "//a[@href = '/account/profile']")  # Профиль
+    Vhod = By.XPATH, ".//h2[text() = 'Вход']"  # Вход
+    Sodery_burger = (By.XPATH, ".//h1[text() = 'Соберите бургер']")  # Соберите бургер
+    Nn_passwrd = (By.XPATH, "//p[text() = 'Некорректный пароль']")  # Некорректный пароль
