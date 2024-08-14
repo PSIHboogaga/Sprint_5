@@ -1,6 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from fixture import driver
+from conftest import driver
 from locators import StellarburgersLocators
 class TestLoginWithButtonEnterInAkk:
     def test_enter_with_button_enter_in_akk(self, driver):

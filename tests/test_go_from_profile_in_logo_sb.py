@@ -1,7 +1,7 @@
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from fixture import driver
+from conftest import driver
 from locators import StellarburgersLocators
 
 class TestGoFromProfileInLogoSB:
